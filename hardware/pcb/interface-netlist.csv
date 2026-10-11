@@ -1,0 +1,17 @@
+Connector,Pin,Net,Direction,Requirement
+J_LIGHT1,1,VOUT1_PROTECTED,OUT,Port 1 independent protected regulated supply
+J_LIGHT1,2,GND,COMMON,Power and signal return
+J_LIGHT1,3,DIM1,OUT,Main MCU LED dim command
+J_LIGHT1,4,LOCAL_SW1,IN,Local switch to main MCU
+J_LIGHT1,5,DIAG_DATA1,OUT,Remote five LED shift register data
+J_LIGHT1,6,DIAG_CLK1,OUT,Remote five LED shift register clock
+J_LIGHT1,7,DIAG_LATCH1,OUT,Remote five LED shift register latch
+J_LIGHT1,8,LED_NTC1,IN,Light thermal sense
+J_LIGHT2,1,VOUT2_PROTECTED,OUT,Port 2 independent protected regulated supply
+J_LIGHT2,2,GND,COMMON,Power and signal return
+J_LIGHT2,3,DIM2,OUT,Main MCU LED dim command
+J_LIGHT2,4,LOCAL_SW2,IN,Local switch to main MCU
+J_LIGHT2,5,DIAG_DATA2,OUT,Remote five LED shift register data
+J_LIGHT2,6,DIAG_CLK2,OUT,Remote five LED shift register clock
+J_LIGHT2,7,DIAG_LATCH2,OUT,Remote five LED shift register latch
+J_LIGHT2,8,LED_NTC2,IN,Light thermal sense
