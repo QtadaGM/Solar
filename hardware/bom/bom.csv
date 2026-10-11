@@ -1,0 +1,46 @@
+Item,Reference,Qty,Subsystem,Part or specification,Status,Selection/validation requirement
+1,J_SOLAR,1,Solar input,2-pin locking connector rated for panel Voc/Isc,TBD,Select sealed keyed connector and verify wire gauge
+2,F_SOLAR,1,Solar input,DC-rated input fuse or protected electronic switch,TBD,Size for actual panel Isc and wire ampacity
+3,D_TVS,1,Solar input,TVS selected for panel Voc and transients,TBD,Verify maximum panel cold Voc and clamping limits
+4,U_CHG,1,Solar charger,Switching LiFePO4 CC/CV solar charger controller,TBD,Confirm 1S LiFePO4 charge profile panel range and current
+5,L_CHG,1,Solar charger,Power inductor for charger,TBD,Calculate saturation ripple and temperature rise
+6,Q_CHG,1,Solar charger,Charger MOSFET(s) if external,TBD,Select from charger reference design
+7,C_CHG,1 set,Solar charger,Input/output low-ESR capacitors,TBD,Calculate voltage ripple and stability
+8,J_BATA,1,Battery A,Keyed protected bank connector,TBD,Rated for max continuous and fault current
+9,J_BATB,1,Battery B,Keyed protected bank connector,TBD,Identical electrical requirements to bank A
+10,U_PROTA,1,Battery A,1S LiFePO4 hardware protector,TBD,Verify actual OV UV OC thresholds
+11,U_PROTB,1,Battery B,1S LiFePO4 hardware protector,TBD,Independent hardware protection required
+12,F_BATA,1,Battery A,DC fuse,TBD,Size for cell bank and wiring
+13,F_BATB,1,Battery B,DC fuse,TBD,Independent from bank A
+14,U_PATHA,1,Battery A,Reverse-blocking current-limited power path,TBD,Prevent uncontrolled bank equalization
+15,U_PATHB,1,Battery B,Reverse-blocking current-limited power path,TBD,Prevent uncontrolled bank equalization
+16,NTC_BATA,1,Battery A,Temperature sensor or NTC,TBD,Use actual cell vendor limits
+17,NTC_BATB,1,Battery B,Temperature sensor or NTC,TBD,Use actual cell vendor limits
+18,SW0,1,Master power,DC-rated multi-pole isolation switch or verified equivalent,TBD,Must isolate solar charging and battery-fed active circuits
+19,U_BOOST,1,Output bus,Efficient boost converter controller,TBD,Output voltage TBD; size for two ports and losses
+20,L_BOOST,1,Output bus,Boost inductor,TBD,Select after topology and load calculations
+21,Q_BOOST,1,Output bus,Boost power MOSFET(s),TBD,SOA and switching losses
+22,C_BUS,1 set,Output bus,Low-ESR input/output capacitors,TBD,Ripple and inrush verification
+23,U_PORT1,1,Jack 1,Fast current-limited eFuse/load switch,TBD,Independent hardware short-circuit cutoff
+24,U_PORT2,1,Jack 2,Fast current-limited eFuse/load switch,TBD,Same part as U_PORT1
+25,J_LIGHT1,1,Jack 1,8-pin keyed locking female connector,TBD,Rated for power pins and signal integrity
+26,J_LIGHT2,1,Jack 2,8-pin keyed locking female connector,TBD,Identical part to J_LIGHT1
+27,SW1,1,Jack 1,Auto/manual switch,TBD,Debounced and safe logic default
+28,SW2,1,Jack 2,Auto/manual switch,TBD,Same part as SW1
+29,U_MCU,1,Control,STM32C071CBT6 candidate,PROPOSED,Verify GPIO ADC timer count and footprint
+30,U_3V3,1,Control,Low-Iq 3.3V regulator,TBD,Input range and sleep current
+31,U_SENSE,1 set,Measurement,Current/voltage sense amplifiers and shunts,TBD,Charge bank and each-port sensing
+32,U_ESD,1 set,Connectors,ESD protection for remote signal lines,TBD,Select for cable exposure
+33,J_SWD,1,Programming,SWD programming/debug pads,TBD,Verify MCU programming and boot mode
+34,R_MISC,1 set,All,Resistors pull-ups dividers sense and LED resistors,TBD,Determine from final schematic
+35,C_MISC,1 set,All,Decoupling and filter capacitors,TBD,Determine from final schematic
+36,TP_ALL,1 set,Test,Test pads for power rails and critical signals,TBD,Add to complete PCB
+37,U_SHIFT_L1,1,Light unit 1,Nonprogrammable serial-to-parallel register,TBD,Five remote diagnostic LEDs
+38,U_SHIFT_L2,1,Light unit 2,Nonprogrammable serial-to-parallel register,TBD,Identical to light unit 1
+39,U_LED_L1,1,Light unit 1,Constant-current LED driver with dimming,TBD,Requires LED array forward voltage and current
+40,U_LED_L2,1,Light unit 2,Constant-current LED driver with dimming,TBD,Identical to light unit 1
+41,NTC_LED1,1,Light unit 1,LED board thermal sensor,TBD,For E09 detection
+42,NTC_LED2,1,Light unit 2,LED board thermal sensor,TBD,For E09 detection
+43,SW_LOCAL1,1,Light unit 1,Local switch,TBD,Select maintained vs momentary
+44,SW_LOCAL2,1,Light unit 2,Local switch,TBD,Identical behavior
+45,LED_DIAG,10,Light units,Five diagnostic indicator LEDs per light,TBD,Color and drive resistors
